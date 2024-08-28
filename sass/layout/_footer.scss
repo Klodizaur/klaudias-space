@@ -1,0 +1,82 @@
+.footer {
+    /*background-color: #131313;*/
+    //background: linear-gradient(
+        //to bottom, rgba(19,19,19,1), 
+        //rgba(19,19,19,1)), 
+        //url(../img/Stars-01.svg);
+    padding: 10rem 0;
+    padding-bottom: 5rem;
+    font-size: 1.4rem;
+    color: $color-grey-light-1;
+    background-blend-mode: screen;
+    background-size: 200%;
+
+    display: grid;
+    grid-column: full-start / full-end;
+    grid-row: footer-start / -1;
+
+    animation: rotateInBottom 4s cubic-bezier(.42,0,.58,1);
+
+    &__logo-box {
+    text-align: center;
+    
+    height: 12vh;
+
+    }
+
+    &__logo {
+    width: 20rem;
+    height: auto;
+    display: block;
+    justify-self: center;
+    margin-bottom: 2rem;
+    }
+
+    &__caption {
+    height: 100%;
+    }
+
+    &__navigation {
+
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    }
+
+    &__list {
+    list-style: none;
+    }
+
+    &__item {
+    display: inline-block;
+    
+
+        &:not(:last-child) {
+        margin-right: 1.5rem;
+        }
+    }
+
+    &__link {
+
+        &:link, &:visited {
+        color: $color-grey-light-1;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: inline-block;
+        transition: all .2s;
+        }
+
+        &:hover, &:active {
+        color: $color-blue;
+        transform: scale(0.9);
+        letter-spacing: .2rem;
+        }
+    }
+
+    &__copyright {
+    width: 100%;
+    padding-top: 1rem;
+    text-align: center;
+    float: left;
+    }
+}

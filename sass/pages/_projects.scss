@@ -1,0 +1,53 @@
+.section-projects-2 {
+    //background: $color-grey-bg;
+
+    display: grid;
+    grid-column: center-start / center-end;
+    grid-row: projects-two-start / projects-two-end;
+
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 7rem;
+
+    
+
+}
+
+
+.project-design {
+    color: $color-white;
+
+    background: linear-gradient(to top, 
+    rgb(37, 37, 37) 0%, 
+   rgb(67, 67, 67) 100%);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 3.5rem;
+ 
+    border-radius: .2rem;
+
+    box-shadow: 0 2rem 2.5rem rgba($color-black, .20);
+    animation: appear 4s cubic-bezier(.42,0,.58,1);
+    @include respond(tab-land)  {
+        
+            grid-column: 1 / -1;
+            width: 70%;
+            
+            justify-self: center;
+        }
+    
+
+    @include respond(tab-port)  {
+            grid-column: 1 / -1;
+            width: 60vw;
+            
+            justify-self: center;
+    }
+
+    @include respond(phone)  {
+            grid-column: 1 / -1;
+            width: 80vw;
+            
+            justify-self: center;
+    }
+}

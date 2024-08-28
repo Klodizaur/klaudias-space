@@ -1,0 +1,73 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; // 1 rem = 10 px
+    height: 100%;
+
+     
+    @include respond(big-desktop) {
+        font-size: 70%; // 1 rem = 12 px
+    }/*
+
+    @include respond(tab-land) { // width < 1200?
+        font-size: 54%; // 1 rem = 8 px
+    }
+
+    @include respond(tab-port) { // width < 900?
+        font-size: 50%; // 
+    }
+    
+     @include respond(phone) {  // width < 600?
+        font-size: 48%;  
+    }
+*/
+   
+   
+}
+    
+
+body {
+    box-sizing: border-box;
+    //background-color: $color-grey-bg;
+    height: 100%;
+
+    background: linear-gradient(to right top, 
+    rgba(33,33,33,1) 0%, 
+    rgb(12, 12, 12) 100%);
+    //url(../img/Stars-01.svg);
+    background-blend-mode: screen;
+    background-attachment: fixed;
+    background-size: cover;
+
+   
+}
+
+::selection {
+    background-color: $color-blue;
+    color: $color-white;
+}
+
+
+.container {
+    display: grid;
+    grid-template-rows: [header-start] 120vh [header-end heading-1] 1fr [heading-1-end about-start] min-content [about-end heading-2] 1fr [heading-2-end projects-start] min-content [projects-end button-start] 1fr [button-end projects-two-start] min-content [projects-two-end heading-3] 1fr [heading-3-end contact-start] min-content [contact-end footer-start] min-content [footer-end];
+    grid-template-columns:  [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
+
+    height: 100%;
+
+    @include respond(tab-port)  {
+        grid-template-rows: [header-start] 100vh [header-end heading-1] 1fr [heading-1-end about-start] min-content [about-end heading-2] 1fr [heading-2-end projects-start] min-content [projects-end button-start] 1fr [button-end projects-two-start] min-content [projects-two-end heading-3] 1fr [heading-3-end contact-start] min-content [contact-end footer-start] min-content [footer-end];
+    
+    }
+ 
+}
+
+
+
+
+
+
